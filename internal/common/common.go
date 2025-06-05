@@ -9,7 +9,7 @@ import (
 
 var DB *db.DB
 
-func UpdateTaskStatus(tsk task.Task) error {
+func UpdateTaskStatus(tsk *task.Task) error {
 	if DB.IsClosed() {
 		return errors.New("db closed")
 	}
