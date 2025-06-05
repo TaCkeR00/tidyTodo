@@ -73,10 +73,10 @@ func MakeRow(tsk task.Task) tview.Primitive {
 	checkDoneAndSetTitleAndDoneBtn := func(title *tview.TextView, tsk task.Task) {
 		if tsk.Done {
 			title.SetText(strike(tsk.Title))
-			done.SetLabel(`[[X]]`)
+			done.SetLabel(`|X|`)
 		} else {
 			title.SetText(unstrike(tsk.Title))
-			done.SetLabel("[ ]")
+			done.SetLabel("| |")
 		}
 	}
 
